@@ -1,0 +1,13 @@
+{
+    "name": "stiles",
+    "description": "Stiles Blog Theme",
+    "version": "0.1.0",
+    "engines": {
+        "ghost": ">=0.9.0 <1.0.0"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Stiles Lee",
+        "email": "cwanninglee@gmail.com"
+    }
+}
