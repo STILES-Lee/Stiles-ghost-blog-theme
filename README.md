@@ -1,3 +1,3 @@
 # Stiles-ghost-blog-theme
 
-stileslee.me
+Blog: http://stileslee.me
