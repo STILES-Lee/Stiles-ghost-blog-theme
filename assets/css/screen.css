@@ -40,9 +40,9 @@ section, summary { display:block; }
 
 main {
     margin-left: 30%;
-    max-width: 54em;
-    padding: 6em 2em 2em 2em;
-    width: calc(100% - 35%);
+    /*max-width: 54em;*/
+    /*padding: 0 2em 2em 0;*/
+    width: calc(100% - 30%);
 }
 
 audio, canvas, progress, video {
@@ -215,7 +215,8 @@ html {
 body {
     height: 100%;
     max-height: 100%;
-    font-family: "Merriweather", serif;
+    /*font-family: "Merriweather", serif;*/
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
     letter-spacing: 0.01rem;
     font-size: 1.8rem;
     line-height: 1.75em;
@@ -276,7 +277,11 @@ h6 {
 
 a {
     color: #4A4A4A;
+    text-decoration: none;
     transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease; /* Firefox 4 */
+    -webkit-transition: color 0.3s ease; /* Safari 和 Chrome */
+    -o-transition: color 0.3s ease; /* Opera */
 }
 
 a:hover {
@@ -619,7 +624,7 @@ body.nav-opened .site-wrapper {
     /*display: table;*/
     /*width: 100%;*/
     height: 100%;
-    padding: 8em 0 0 0;
+    padding: 10% 0 0 0;
     /*margin-bottom: 5rem;*/
     text-align: right;
     background-attachment: scroll, fixed;
@@ -631,12 +636,12 @@ body.nav-opened .site-wrapper {
 }
 
 .main-header .inner {
-    width: 60%;
+    width: 70%;
     right: 0;
     z-index: 1;
 }
 
-.main-header:after {
+/*.main-header:after {
     content: '';
     z-index: -1;
     position: absolute;
@@ -655,22 +660,88 @@ body.nav-opened .site-wrapper {
     -webkit-filter: blur(15px);
     filter: blur(15px);
     margin: -30px;
-}
+}*/
 
 .main-header strong, .main-header b {
     color: #ffffff;
 }
 
 
-.main-header h1 {
+.main-header p {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.15em;
-    line-height: 1.65em;
+    line-height: 1.75em;
 }
 
 .main-header a {
     text-decoration: none;
     font-family: 'Open Sans', sans-serif;
+}
+
+/* Footer in Main Header */
+.header-footer {
+    position: fixed;
+    left: 0;
+    /*margin: 8rem 0 0 0;*/
+    padding: 10% 0 0 0;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.5em;
+    color: #BBC7CC;
+    width: 30%;
+    text-align: right;
+}
+
+.header-footer a {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-footer .icons {
+            margin: 10px 0;
+            cursor: default;
+            list-style: none;
+            padding-left: 0;
+            width: 80%;
+        }
+
+            .header-footer .icons a {
+                color: rgba(255, 255, 255, 0.4);
+            }
+
+            .header-footer .icons a:hover {
+                border-bottom-color: transparent;
+                color: rgba(255, 97, 97, 1) !important;
+                text-decoration: none;
+            }
+
+.header-footer ul.icons li {
+    display: inline-block;
+    margin-left: 0.5em;
+    font-size: 1.3em;
+}
+
+.header-footer .poweredby {
+    right: 0;
+    display: block;
+    width: 80%;
+    text-align: right;
+    font-size: 0.7em;
+}
+
+.header-footer .copyright {
+    right: 0;
+    display: block;
+    width: 80%;
+    font-size: 0.7em;
+}
+
+.header-footer .copyright a:hover {
+    color: rgba(255, 97, 97, 1);
+}
+
+.header-footer .poweredby a:hover {
+    color: rgba(255, 97, 97, 1);
 }
 
 /* Navigation */
@@ -860,7 +931,7 @@ body.nav-opened .nav {
 
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
-.scroll-down {
+/*.scroll-down {
     display: block;
     position: absolute;
     z-index: 100;
@@ -879,13 +950,13 @@ body.nav-opened .nav {
     -webkit-animation: bounce 4s 2s infinite;
     animation: bounce 4s 2s infinite;
 }
-
+*/
 /* Stop it bouncing and increase contrast when hovered */
-.scroll-down:hover {
+/*.scroll-down:hover {
     color: #fff;
     -webkit-animation: none;
     animation: none;
-}
+}*/
 
 /* Put a semi-opaque radial gradient behind the icon to make it more visible
    on photos which happen to have a light background. */
@@ -935,7 +1006,14 @@ body.nav-opened .nav {
     height: 5em;
 }
 
-.menu-button {
+/*** Main Content in Home Page ***/
+
+/* Header in main content */
+.content-header {
+    background-color: #f8f9f9;
+}
+
+/*.menu-button {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -969,26 +1047,26 @@ body.nav-opened .nav {
 }
 
 /* When the navigation is closed */
-.nav-closed .menu-button {
+/*.nav-closed .menu-button {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.6);
 }
 .nav-closed .menu-button:hover {
     color: #222;
-}
+}*/
 
 /* When the navigation is closed and there is no cover image */
-.nav-closed .no-cover .menu-button {
+/*.nav-closed .no-cover .menu-button {
     border-color: #BFC8CD;
     color: #9EABB3;
 }
 .nav-closed .no-cover .menu-button:hover {
     border-color: #555;
     color: #555;
-}
+}*/
 
 /* When the navigation is opened */
-.nav-opened .menu-button {
+/*.nav-opened .menu-button {
     padding: 0 12px;
     background: #111;
     border-color: #111;
@@ -1002,7 +1080,7 @@ body.nav-opened .nav {
 .nav-opened .menu-button .word {
     opacity: 0;
     transition: all 0.3s ease;
-}
+}*/
 
 /* Special styles when overlaid on an image*/
 .main-nav.overlay {
@@ -1066,20 +1144,62 @@ body.nav-opened .nav {
     animation-delay: 0.1s;
 }
 
+/* Header in home content */
+.tabs {
+    padding: 0.5em 25%;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.tabs-item {
+    text-transform: uppercase;
+    font-size: 1.15em;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.tabs-item.active {
+    border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+}
+
+.tabs-item:not(.active){
+    position: relative;
+    color: #0a0a0a;
+}
+
+.tabs-item:not(.active):after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 3px solid rgba(255, 0, 0, 0.6);
+    -moz-transition: width 0.4s ease-in-out; /* Firefox 4 */
+    -o-transition: width 0.4s ease-in-out; /* Opera */
+    -webkit-transition: width 0.4s ease-in-out; /* Safari 和 Chrome */
+    transition: width 0.4s ease-in-out;
+    z-index: 10;
+}
+
+.tabs-item:not(.active):hover:after {
+    width: 100%;
+}
+
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
     position: relative;
-    width: 80%;
-    max-width: 710px;
-    margin: 4rem auto;
-    padding-bottom: 4rem;
-    border-bottom: #EBF2F6 1px solid;
-    word-wrap: break-word;
+    /*margin: 0 auto;*/
+    /*padding: 4rem 5rem 8rem 5rem;*/
+    /*word-wrap: break-word;*/
 }
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
-.post:after {
+/*.post:after {
     display: block;
     content: "";
     width: 7px;
@@ -1092,6 +1212,35 @@ body.nav-opened .nav {
     background: #FFF;
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
+}*/
+
+.post.main-posts:nth-child(even) {
+    background-color: #f8f9f9;
+}
+
+.post.main-posts:hover {
+    /*background-color: rgba(0, 123, 167, 0.05);*/
+    background-color: rgba(255, 0, 0, 0.05);
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s; 
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+
+.posts-link {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    margin: 0 auto;
+    padding: 4rem 17% 8rem 17%;
+    word-wrap: break-word;
+}
+
+.post-date {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    white-space: nowrap;
 }
 
 body:not(.post-template) .post-title {
@@ -1102,9 +1251,9 @@ body.page-template .post-title {
     font-size: 5rem;
 }
 
-.post-title a {
+/*.post-title a {
     text-decoration: none;
-}
+}*/
 
 .post-excerpt p {
     margin: 0;
@@ -1112,50 +1261,60 @@ body.page-template .post-title {
     line-height: 1.7em;
 }
 
-.read-more {
-    text-decoration: none;
+.post-read-more {
+    font-weight: 1.5rem;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-top: 1.5rem;
+    color: rgba(255, 0, 0, 0.6);
+    border: 3px solid rgba(255, 0, 0, 0.6);
+    box-shadow: inset 0 0 0 0 rgba(255, 0, 0, 0.6);
+    -moz-transition: all 0.4s ease-in-out; /* Firefox 4 */
+    -o-transition: all 0.4s ease-in-out; /* Opera */
+    -webkit-transition: all 0.4s ease-in-out; /* Safari 和 Chrome */
+    transition: all 0.4s ease-in-out;
 }
 
-.post-meta {
+.post.main-posts:hover .post-read-more {
+    box-shadow: inset 175px 0 0 0 rgba(255, 0, 0, 0.6);
+    color: #f8f9f9;
+}
+
+
+/*.read-more {
+    text-decoration: none;
+}*/
+
+/*.post-meta {
     display: block;
     margin: 1.75rem 0 0 0;
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
     color: #9EABB3;
-}
+}*/
 
-.author-thumb {
+/*.author-thumb {
     width: 24px;
     height: 24px;
     float: left;
     margin-right: 9px;
     border-radius: 100%;
-}
+}*/
 
-.post-meta a {
-    color: #9EABB3;
+/*.post-meta a {
     text-decoration: none;
+    color: #9EABB3;
 }
 
 .post-meta a:hover {
     text-decoration: underline;
-}
+}*/
 
 .user-meta {
     position: relative;
     padding: 0.3rem 40px 0 100px;
     min-height: 77px;
-}
-
-.post-date {
-    display: inline-block;
-    margin-left: 8px;
-    padding-left: 12px;
-    border-left: #d5dbde 1px solid;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    white-space: nowrap;
 }
 
 .user-image {
@@ -1199,6 +1358,56 @@ body.page-template .post-title {
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
+#return-nav {
+    position: absolute;
+    left: 2em;
+    top: 1em;
+}
+
+#return-nav i {
+    color: #fff;
+}
+
+
+#post-header {
+    position: relative;
+    /*left: 10%;
+    bottom: 15%;
+    top: 55%;
+    text-align: left;*/
+    color: #fff;
+    display: webkit-box;
+    display: ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+    box-sizing: border-box;
+}
+
+#post-meta {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#post-meta a {
+    color: #fff;
+}
+
+.post-main {
+    margin: 0 auto;
+    text-align: left;
+    padding: 3.5em 0;
+    width: 80%;
+}
 
 .post-template .post-header,
 .page-template .post-header {
@@ -1208,6 +1417,7 @@ body.page-template .post-title {
 .post-template .post-title,
 .page-template .post-title {
     margin-bottom: 0;
+    color: #fff;
 }
 
 .post-template .post-meta,
@@ -1367,15 +1577,24 @@ body.page-template .post-title {
    ========================================================================== */
 
 .post-head.main-header {
-    height: 65vh;
+    height: 60vh;
+    width: 100%;
+    padding: 3em 0;
+    position: relative;
     min-height: 180px;
+    text-align: left;
+    background-size: cover;
+    background-position: 50%;
 }
 
 .no-cover.post-head.main-header {
-    height: 85px;
-    min-height: 0;
+    position: relative;
+    width: 100%;
+    height: 25px;
     margin-bottom: 0;
     background: transparent;
+    text-align: left;
+    padding: 1em 0 0 2em;
 }
 
 .tag-head.main-header {
@@ -1532,12 +1751,16 @@ body.page-template .post-title {
 .read-next-story:hover:before {
     background: rgba(0,0,0,0.8);
     transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease; /* Firefox 4 */
+    -webkit-transition: all 0.2s ease; /* Safari 和 Chrome */
+    -o-transition: all 0.2s ease; /* Opera */
+
 }
-.read-next-story:hover .post:before {
+/*.read-next-story:hover .post:before {
     color: #222;
     background: #fff;
     transition: all 0.2s ease;
-}
+}*/
 
 .read-next-story:before {
     content: "";
@@ -1549,26 +1772,30 @@ body.page-template .post-title {
     left: 0;
     background: rgba(0,0,0,0.7);
     transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease; /* Firefox 4 */
+    -webkit-transition: all 0.5s ease; /* Safari 和 Chrome */
+    -o-transition: all 0.5s ease; /* Opera */
 }
 
 .read-next-story .post {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 6em 0;
 }
 
 .read-next-story .post:before {
-    content: "Read This Next";
+    content: "Read Next";
     padding: 4px 10px 5px;
     text-transform: uppercase;
-    font-size: 1.1rem;
+    font-size: 0.9em;
     font-family: "Open Sans", sans-serif;
-    color: rgba(255,255,255,0.8);
-    border: rgba(255,255,255,0.5) 1px solid;
-    border-radius: 4px;
-    transition: all 0.5s ease;
+    color: #fff;
+    /*color: rgba(255,255,255,0.8);*/
+    /*border: rgba(255,255,255,0.5) 1px solid;
+    border-radius: 4px;*/
+    /*transition: all 0.5s ease;*/
 }
+
 .read-next-story.prev .post:before {
-    content: "You Might Enjoy";
+    content: "READ PRE";
 }
 
 .read-next-story h2 {
@@ -1649,19 +1876,44 @@ body.page-template .post-title {
 
 /* The main wrapper for our pagination links */
 .pagination {
-    position: relative;
+    /*position: relative;
     width: 80%;
     max-width: 710px;
     margin: 4rem auto;
     font-family: "Open Sans", sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
-    text-align: center;
+    text-align: center;*/
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
 }
 
 .pagination a {
-    color: #9EABB3;
-    transition: all 0.2s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 2rem 0;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    background-color: #0a0a0a;
+    transition: background-color 0.4s ease-in-out;
+    -moz-transition: background-color 0.4s ease-in-out; /* Firefox 4 */
+    -webkit-transition: background-color 0.4s ease-in-out; /* Safari 和 Chrome */
+    -o-transition: background-color 0.4s ease-in-out; /* Opera */
+}
+
+.pagination a:hover {
+    background-color: rgba(255, 0, 0, 0.6);
 }
 
 /* Push the previous/next links out to the left/right */
@@ -1674,17 +1926,20 @@ body.page-template .post-title {
     text-decoration: none;
     border-radius: 4px;
     transition: border 0.3s ease;
+    -moz-transition: border 0.3s ease; /* Firefox 4 */
+    -webkit-transition: border 0.3s ease; /* Safari 和 Chrome */
+    -o-transition: border 0.3s ease; /* Opera */
 }
 
 .older-posts {
     right: 0;
 }
 
-.page-number {
+/*.page-number {
     display: inline-block;
     padding: 2px 0;
     min-width: 100px;
-}
+}*/
 
 .newer-posts {
     left: 0;
@@ -1719,9 +1974,9 @@ body.page-template .post-title {
 }
 
 /* On page2+ make all the headers smaller */
-.paged .main-header {
+/*.paged .main-header {
     max-height: 30vh;
-}
+}*/
 
 /* On page2+ show extra pagination controls at the top of post list */
 .paged .extra-pagination {
@@ -1769,11 +2024,17 @@ body.page-template .post-title {
     margin: 0;
     border-radius: 4px 0 0 4px;
     transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s; /* Firefox 4 */
+    -webkit-transition: all ease 0.5s; /* Safari 和 Chrome */
+    -o-transition: all ease 0.5s; /* Opera */
 }
 
 .gh-subscribe .subscribe-email:focus {
     border: #5ba4e5 1px solid;
     transition: all ease 0.2s;
+    -moz-transition: all ease 0.2s; /* Firefox 4 */
+    -webkit-transition: all ease 0.2s; /* Safari 和 Chrome */
+    -o-transition: all ease 0.2s; /* Opera */
 }
 
 .gh-subscribe button {
@@ -1792,72 +2053,67 @@ body.page-template .post-title {
    ========================================================================== */
 
 .site-footer {
-    position: fixed;
+    display: none;
+    background-size: cover;
+    background-position: bottom left;
+    position: relative;
     left: 0;
-    /*margin: 8rem 0 0 0;*/
-    padding: 0 0 8em 0;
+    padding: 1em 0 3em 0;
     font-family: "Open Sans", sans-serif;
-    line-height: 1.75em;
+    line-height: 1.5em;
     color: #BBC7CC;
-    width: 30%;
-    text-align: right;
+    width: 100%;
+    text-align: center;
 }
 
-/*.site-footer ul {
-    list-style: disc;
-}*/
-
 .site-footer a {
-    color: rgba(255, 255, 255, 0.4);
-    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
     font-weight: bold;
 }
 
 .site-footer .icons {
-            margin: 0;
+            margin: 10px 0;
             cursor: default;
             list-style: none;
             padding-left: 0;
-            width: 80%;
+            width: 100%;
         }
 
             .site-footer .icons a {
-                color: rgba(255, 255, 255, 0.4);
+                color: rgba(255, 255, 255, 0.7);
             }
 
             .site-footer .icons a:hover {
                 border-bottom-color: transparent;
-                color: #49bf9d !important;
-                text-decoration: none;
+                color: rgba(255, 97, 97, 1) !important;
             }
 
 ul.icons li {
     display: inline-block;
     margin-left: 0.5em;
-    font-size: 1.3em;
+    font-size: 1.5em;
 }
 
 .poweredby {
     right: 0;
     display: block;
-    width: 80%;
-    text-align: right;
+    width: 100%;
     font-size: 0.8em;
 }
 
 .copyright {
     right: 0;
     display: block;
-    width: 80%;
+    width: 100%;
     font-size: 0.8em;
 }
 
 .copyright a:hover {
-    border-bottom: #bbc7cc 1px solid;
+    color: rgba(255, 97, 97, 1);
 }
 
 .poweredby a:hover {
-    border-bottom: #bbc7cc 1px solid;
+    color: rgba(255, 97, 97, 1);
 }
 
 
@@ -1872,13 +2128,48 @@ ul.icons li {
     }
 
     .main-header {
+        position: relative;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        height: auto;
-        min-height: 240px;
-        height: 60vh;
-        padding: 15% 0;
+        width: 100%;
+        height: 100%;
+        /*min-height: 290px;
+        height: 60vh;*/
+        left: auto;
+        top: auto;
+        padding: 2.25em 1.5em;
+        text-align: center;
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: left top, center center;
+        background-repeat: repeat, no-repeat;
+    }
+
+    .main-header .inner {
+        width: 50%;
+    }
+
+    .header-footer {
+        display: none;
+    }
+
+    #content {
+        display: block;
+        /*position: static;*/
+        margin: 0;
+        width: 100%;
+        padding: 0 0 1rem 0;
+    }
+
+    .site-footer {
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+
+    main.post-main {
+        width: 100%;
     }
 
     .scroll-down,
@@ -1903,8 +2194,13 @@ ul.icons li {
         line-height: 1.5em;
     }
 
+    .tabs {
+        padding: 0.5em 6em;
+    }
+
     .post {
-        font-size: 0.95em
+        font-size: 0.95em;
+        /*width: 90%;*/
     }
 
     body:not(.post-template) .post-title {
@@ -1965,7 +2261,7 @@ ul.icons li {
     }
 
     .post-head.main-header {
-        height:45vh;
+        height:60vh;
     }
 
     .tag-head.main-header,
@@ -2001,6 +2297,7 @@ ul.icons li {
         -ms-flex-direction: column;
         flex-direction: column;
         margin-top: 4rem;
+        z-index: 1;
     }
 
     .read-next p {
@@ -2022,8 +2319,15 @@ ul.icons li {
 @media only screen and (max-width: 500px) {
 
     .main-header {
-        margin-bottom: 15px;
+        padding: 4.5em 1.5em;
         height: 40vh;
+        min-height: 240px;
+        padding: 7% 0;
+    }
+
+    .main-header .inner {
+        width: 70%;
+        margin: 0 auto;
     }
 
     .no-cover.main-header {
@@ -2041,12 +2345,18 @@ ul.icons li {
         margin-bottom: 2rem;
     }
 
+    main.post-main {
+        width: 100%;
+    }
+
     .blog-logo {
-        padding: 5px;
+        width: 25%;
+        height: 25%;
     }
 
     .blog-logo img {
-        height: 30px;
+        width: 100%;
+        height: 100%;
     }
 
     .menu-button {
@@ -2103,13 +2413,19 @@ ul.icons li {
         margin: 2rem auto;
     }
 
+    .tabs {
+        padding: 0.5em 4em;
+        margin: 0 auto;
+    }
+
     .post {
-        width: auto;
-        margin-top: 2rem;
+        /*width: 90%;*/
+        margin: 0 auto;
+        /*margin-top: 2rem;
         margin-bottom: 2rem;
         margin-left: 16px;
-        margin-right: 16px;
-        padding-bottom: 2rem;
+        margin-right: 16px;*/
+        padding: 3em 5% 2em 5%;
         line-height: 1.65em;
     }
 
@@ -2252,7 +2568,7 @@ ul.icons li {
     }
 
     .post-head.main-header {
-        height: 30vh;
+        height: 40vh;
     }
 
     .tag-head.main-header,
