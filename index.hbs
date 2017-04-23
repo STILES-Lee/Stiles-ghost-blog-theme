@@ -31,25 +31,6 @@
 
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
-    <header class="content-header">
-        <ul class="tabs">
-            <li class="tabs-item">Posts</li>
-            <li class="tabs-item">Tags</li>
-        </ul>
-    </header>
-
-    <div class="tag" style="display: block;">
-        {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-        {{> "loop"}}
-    </div>
-
-    <div class="tag" style="display: none;">
-        <ul class="tags">
-            <li class="tags-item">
-            <a href="/tag/data-structure/"></a>
-            </li>
-        </ul>
-    </div>
-    
-
+    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+    {{> "loop"}}
 </main>
