@@ -7,6 +7,7 @@
     "use strict";
 
     var $document = $(document);
+    var $preImg = $(".posts-link");
 
     $document.ready(function () {
 
@@ -19,32 +20,60 @@
         //     e.preventDefault();
         //     $("body").toggleClass("nav-opened nav-closed");
         // });
+        change_imgHeight();
+        
+        $(window).resize(function() {
+        	change_imgHeight();
+        })
 
-        var $tabs = $(".tabs-item");
-        $tabs[0].classList.add("active");
+        $preImg.hover( 
+            /* MouseOn*/
+            function() {
+                var $image = $(this).children(".link-img");
+                var $view_more = $(this).children(".view-more");
 
-        var $tag = $(".tag");
-        $tag[0].classList.add("active");
+                $image.css({
+                    "-moz-transition": "all 0.4s ease-in-out",
+                    "-webkit-transition": "all 0.4s ease-in-out",
+                    "transition": "all 0.4s ease-in-out",
+                    "-webkit-filter": "blur(2px)",
+                    "-moz-filter": "blur(2px)",
+                    "-ms-filter": "blur(2px)",
+                    "-o-filter": "blur(2px)",
+                    "filter": "blur(2px)",
+                    "background-color": "rgba(0,0,0,0.8)"
+                });
 
-        var currentIdx = 0,
-            preIdx = currentIdx;
+                $view_more.css({
+                    "display": "inline-block"
+                });
 
-        $tabs.click(function() {
-            var idx = $(this).index();
-            preIdx = currentIdx;
-            currentIdx = idx;
+            /* MouseOut */
+            }, function() {
+                var $image = $(this).children(".link-img");
+                var $view_more = $(this).children(".view-more");
 
-            if (preIdx !==  currentIdx) {
-                $tabs[preIdx].classList.remove('active');
-                $tabs[currentIdx].classList.add('active');
+                $image.css({
+                    "-webkit-filter": "blur(0px)",
+                    "-moz-filter": "blur(0px)",
+                    "-ms-filter": "blur(0px)",
+                    "-o-filter": "blur(0px)",
+                    "filter": "blur(0px)",
+                    "background-color": "rgba(0,0,0,0.1)"
+                });
 
-                $tag[preIdx].style.display = 'none';
-                $tag[preIdx].classList.remove('active');
-                $tag[currentIdx].style.display = 'block';
-                $tag[currentIdx].classList.add('active');
-            };
+                $view_more.css({
+                    "display": "none"
+                });
         });
     });
+
+
+	function change_imgHeight() {
+    	var parentWidth = $preImg.parent(".post").width();
+        var height = parentWidth * 0.65;
+        $preImg.css({"height": height});
+    }
 
     // Arctic Scroll by Paul Adam Davis
     // https://github.com/PaulAdamDavis/Arctic-Scroll
@@ -78,3 +107,5 @@
 
     // };
 })(jQuery);
+
+
