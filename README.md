@@ -1,3 +1,3 @@
 # Stiles-ghost-blog-theme
 
-Blog addr: http://stileslee.me
+Blog addr: https://stileslee.me
